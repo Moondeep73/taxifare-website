@@ -30,8 +30,13 @@ for i, pt in enumerate(st.session_state.points):
     folium.Marker(location=[pt["lat"], pt["lng"]], popup=label, icon=folium.Icon(color=color)).add_to(m)
 
 # If both points exist, draw a line
+# If both points exist, draw a line
 if len(st.session_state.points) == 2:
     folium.PolyLine(
         locations=[
             [st.session_state.points[0]["lat"], st.session_state.points[0]["lng"]],
-            [st.session_state.points[1]["lat"], st.ses_]()
+            [st.session_state.points[1]["lat"], st.session_state.points[1]["lng"]]
+        ],
+        color="green",
+        weight=4
+    ).add_to(m)
