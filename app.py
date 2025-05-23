@@ -7,7 +7,7 @@ h1 {
     color: red;
 }
 .stApp {
-    background-image: url(https://avatars1.githubusercontent.com/u/9978111?v=4);
+    background-image: url(ion-fet-QRawWgV6gmo-unsplash.jpg);
     background-size: cover;
 }
 """
