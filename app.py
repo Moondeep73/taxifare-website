@@ -17,26 +17,6 @@ h1 {
 if st.checkbox('Inject CSS'):
     st.write(f'<style>{CSS}</style>', unsafe_allow_html=True)
 
-st.markdown("""# This is a header
-## This is a sub header
-This is text""")
-
-df = pd.DataFrame({
-    'first column': list(range(1, 11)),
-    'second column': np.arange(10, 101, 10)
-})
-
-# this slider allows the user to select a number of lines
-# to display in the dataframe
-# the selected value is returned by st.slider
-line_count = st.slider('Select a line count', 1, 10, 3)
-
-# and used to select the displayed lines
-head_df = df.head(line_count)
-
-head_df
-
-
 '''
 # TaxiFareModel front
 '''
@@ -77,6 +57,8 @@ if url == 'https://taxifare.lewagon.ai/predict':
 
 2. Let's build a dictionary containing the parameters for our API...
 
+'''
+
 st.title("🚖 Taxi Fare Predictor")
 
 st.markdown("Enter the ride details to get a fare estimate:")
@@ -91,9 +73,13 @@ dropoff_longitude = st.number_input("Dropoff Longitude", value=-73.985428)
 dropoff_latitude = st.number_input("Dropoff Latitude", value=40.758896)
 passenger_count = st.slider("Passenger Count", min_value=1, max_value=8, value=1)
 
+'''
+
 3. Let's call our API using the `requests` package...
 
 4. Let's retrieve the prediction from the **JSON** returned by the API...
+
+'''
 
 if st.button("Get Fare Prediction"):
     url = "https://taxifare.lewagon.ai/predict"  # Or your own API if deployed
@@ -116,4 +102,3 @@ if st.button("Get Fare Prediction"):
         st.error("Failed to get prediction. Please check the inputs or API status.")
 
 ## Finally, we can display the prediction to the user
-'''
