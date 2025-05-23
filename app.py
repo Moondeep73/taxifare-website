@@ -81,6 +81,11 @@ passenger_count = st.slider("Passenger Count", min_value=1, max_value=8, value=1
 
 '''
 
+st.map(data={
+    "lat": [pickup_latitude, dropoff_latitude],
+    "lon": [pickup_longitude, dropoff_longitude]
+})
+
 if st.button("Get Fare Prediction"):
     url = "https://taxifare.lewagon.ai/predict"  # Or your own API if deployed
 
