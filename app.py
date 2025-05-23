@@ -7,7 +7,7 @@ h1 {
     color: red;
 }
 .stApp {
-    background-image: url(ion-fet-QRawWgV6gmo-unsplash.jpg);
+    background-image: url('https://raw.githubusercontent.com/Moondeep73/taxifare-website/master/ion-fet-QRawWgV6gmo-unsplash.jpg');
     background-size: cover;
 }
 """
